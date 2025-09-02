@@ -5,8 +5,46 @@ info:
 servers:
   - url: 'https://localhost:8000'
 paths:
-  /uesrs/{id}:
+  /users/{id}:
+    get:
+      parameters:
+        - $ref: "#/components/parameters/Identifier"
+      responses:
+        '200':
+          description: Fetching a user's information by his identifier
+          content:
+            application/json:
+              schema: 
+                $ref: "#/components/schemas/UserProfile"
+  /users:
+    post:
+      requestBody:
+        description: the user informations
+        content:
+          application/json:
+            schema: 
+              type: array
+              items:
+                $ref: '#/components/schemas/UserProfile'
+      responses:
+        '201':
+          description: the new set of user's
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserProfile'
+
 components:
+  parameters:
+    Identifier:
+      name: id 
+      in: path
+      required: true
+      description: the identifier of the user we want to edit retrieve from the database
+      schema:
+        type: integer
   schemas:
     PersonalInfo:
       type: object
