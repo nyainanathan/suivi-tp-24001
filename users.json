@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Dupont",
+    "email": "alice.dupont@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Jean Martin",
+    "email": "jean.martin@example.com"
+  },
+  {
+    "id": 3,
+    "name": "Sophie Bernard",
+    "email": "sophie.bernard@example.com"
+  },
+  {
+    "id": 4,
+    "name": "Paul Leroy",
+    "email": "paul.leroy@example.com"
+  },
+  {
+    "id": 5,
+    "name": "Emma Petit",
+    "email": "emma.petit@example.com"
+  },
+  {
+    "id": 6,
+    "name": "Lucas Moreau",
+    "email": "lucas.moreau@example.com"
+  },
+  {
+    "id": 7,
+    "name": "Chloé Garcia",
+    "email": "chloe.garcia@example.com"
+  },
+  {
+    "id": 8,
+    "name": "Hugo Laurent",
+    "email": "hugo.laurent@example.com"
+  },
+  {
+    "id": 9,
+    "name": "Manon Roux",
+    "email": "manon.roux@example.com"
+  },
+  {
+    "id": 10,
+    "name": "Louis Fontaine",
+    "email": "louis.fontaine@example.com"
+  },
+  {
+    "id": 11,
+    "name": "Camille Blanchet",
+    "email": "camille.blanchet@example.com"
+  },
+  {
+    "id": 12,
+    "name": "Nathan Caron",
+    "email": "nathan.caron@example.com"
+  },
+  {
+    "id": 13,
+    "name": "Julie Gauthier",
+    "email": "julie.gauthier@example.com"
+  },
+  {
+    "id": 14,
+    "name": "Thomas Renaud",
+    "email": "thomas.renaud@example.com"
+  },
+  {
+    "id": 15,
+    "name": "Clara Marchand",
+    "email": "clara.marchand@example.com"
+  },
+  {
+    "id": 16,
+    "name": "Mathis Barbier",
+    "email": "mathis.barbier@example.com"
+  },
+  {
+    "id": 17,
+    "name": "Eva Olivier",
+    "email": "eva.olivier@example.com"
+  },
+  {
+    "id": 18,
+    "name": "Antoine Pires",
+    "email": "antoine.pires@example.com"
+  },
+  {
+    "id": 19,
+    "name": "Léa Dumont",
+    "email": "lea.dumont@example.com"
+  },
+  {
+    "id": 20,
+    "name": "Gabriel Perrot",
+    "email": "gabriel.perrot@example.com"
+  }
+]
