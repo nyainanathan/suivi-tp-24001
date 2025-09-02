@@ -1,0 +1,63 @@
+openapi: 3.0.3
+info:
+  title: API exercice 2
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+paths:
+  /users:
+    get:
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Size'
+      responses:
+        '200':
+          description: return a json of the researched users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      description: the id of the user
+                    name:
+                      type: string
+                      description: the name of the user
+                    email:
+                      type: string
+                      description: the email of the user
+                  required:
+                    - id
+                    - name
+                    - email
+              example:
+                - id: 1
+                  name: Alice
+                  email: alice@exemple.com
+        '400':
+          description: the user gave the wrong parameters
+          content:
+            application/json:
+              example:
+                {"error" : "Bad types for provided query parameters"}
+
+
+components:
+  parameters:
+    Page:
+      name: Page
+      in: query
+      required: false
+      schema:
+        type: integer
+      description: La page ou l'utilisateur ira chercher cet user
+    Size:
+      name: Size
+      in: query
+      required: false
+      schema:
+        type: integer
+      description: the size for each page
