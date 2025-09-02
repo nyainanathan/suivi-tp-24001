@@ -1,0 +1,105 @@
+openapi: 3.1.0
+info:
+  title: API exercice 5
+  version: 1.0.0
+servers:
+  - url: 'https://localhost:8000'
+tags:
+  - name: products
+    description: All things related to products
+  - name: order
+    description: All things related to order
+paths:
+  /products:
+    get:
+      tags:
+        - products
+      parameters:
+         - $ref: '#/components/parameters/Limit'
+         - $ref: '#/components/parameters/Q'
+      responses:
+        '200':
+          description: the products are fetched correctly
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+                example:
+                  [
+                    {
+                      "name": "iPhone 16",
+                      "expiration_datetime": "2025-09-02T17:20:20Z",
+                      "price": 1200.1
+                    },{
+                      "name": "iPhone 17",
+                      "expiration_datetime": "2025-09-03T17:20:20Z",
+                      "price": 1300.129
+                    }
+                  ]
+components:
+  schemas:
+    Order:
+      type: object
+      properties:
+        identifier:
+          type: integer
+          description: the unique identifier to each order 
+        customer_name: 
+          type: string
+          description: self explanatory
+        creation_datetime:
+          type: string
+          format: date-time
+        total_amount:
+          type: number
+    Product:
+          required:
+            - name
+            - expiration_datetime
+            - price
+          type: object
+          properties:
+            name:
+              type: string
+            expiration_datetime:
+              type: string
+              format: date-time
+            price:
+              type: number
+          example:  
+            name: "iPhone 17"
+            expiration_datetime: "2025-09-03T17:20:20Z"
+            price: 1300.129
+  parameters:
+    Page:
+      name: page 
+      in: query
+      description: The page shown based on the size we have
+      required: true
+      schema:
+        type: integer
+        example: 1
+    Size:
+      name: size
+      in: query
+      description: The size of each page
+      required: false
+      schema:
+        type: integer
+        example: 5
+    Limit:
+      name: limit
+      in: query
+      required: false
+      description: The maximum amount of products per research
+      schema:
+        type: integer
+    Q:
+      name: q
+      in: query
+      required: false
+      description: the query selector
+      schema:
+        type: string
