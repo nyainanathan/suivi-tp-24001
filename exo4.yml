@@ -5,9 +5,14 @@ info:
   version: 1.0.0
 servers:
   - url: 'https://localhost:8000'
+tags:
+  - name: products
+    description: All things related to products
 paths:
   /products:
     get:
+      tags:
+        - products
       parameters:
          - $ref: '#/components/parameters/Limit'
          - $ref: '#/components/parameters/Q'
