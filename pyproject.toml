@@ -1,0 +1,10 @@
+[project]
+name = "suivi-ts-oas"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.116.1",
+    "pydantic>=2.11.7",
+    "starlette>=0.47.3",
+]
