@@ -1,0 +1,17 @@
+openapi: 3.0.3
+info:
+  title: API exercice 1
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+paths:
+  /ping:
+    get:
+      responses:
+        '200':
+          description: And endpoint built to test out the server by return a simple ping to the user
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong
