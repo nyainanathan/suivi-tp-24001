@@ -38,6 +38,34 @@ paths:
                       "price": 1300.129
                     }
                   ]
+  /orders:
+    get:
+      tags:
+        - order
+      responses:
+        '200':
+          description: return a list of all the orders 
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Order'
+              example:
+                [
+                  {
+                    "identifier": 12345,
+                    "customer_name": "Alice Dupont",
+                    "creation_datetime": "2025-09-02T18:30:00Z",
+                    "total_amount": 2801.98
+                  },
+                  {
+                    "identifier": 12346,
+                    "customer_name": "Bob Martin",
+                    "creation_datetime": "2025-09-03T09:15:00Z",
+                    "total_amount": 1500.50
+                  }
+                ]
 components:
   schemas:
     Order:
